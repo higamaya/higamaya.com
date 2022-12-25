@@ -16,6 +16,14 @@ images = ["images/icatch_1200x630.png"]
 logo = "images/logo_192x192.png"
 externalLinkInNewTab = false
 
+[params.theme.header]
+hideDescription = true
+
+[params.theme.footer]
+hideSocial = true
+hideEmail = true
+oneLine = true
+
 [author]
 name = "Mitsunobu Yoneda"
 email = "support@higamaya.com"
