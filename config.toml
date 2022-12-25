@@ -1,0 +1,31 @@
+baseURL = "https://higamaya.com/"
+languageCode = "en-us"
+title = "Higama-ya"
+copyright = "© 2022 Higama-ya"
+theme = "minimal-hugo"
+publishDir = "docs"
+enableEmoji = true
+enableGitInfo = true
+googleAnalytics = "G-QQVSLKG2LF"
+
+[params]
+description = "Higama-ya's website"
+images = ["images/icatch_1200x630.png"]
+
+[params.theme]
+logo = "images/logo_192x192.png"
+externalLinkInNewTab = false
+
+[author]
+name = "Mitsunobu Yoneda"
+email = "support@higamaya.com"
+
+[social]
+github = "higamaya"
+twitter = "higama_ya"
+
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+
+[taxonomies]

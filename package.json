@@ -1,0 +1,25 @@
+{
+  "name": "higamaya.com",
+  "version": "1.0.0",
+  "description": "Higama-ya's website.",
+  "private": true,
+  "author": "Higama-ya",
+  "license": "MIT",
+  "homepage": "https://higamaya.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higamaya/higamaya.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/higamaya/higamaya.com/issues"
+  },
+  "scripts": {
+    "start": "hugo server --ignoreCache"
+  },
+  "devDependencies": {
+    "hugo-extended": "^0.108.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-go-template": "^0.0.13",
+    "prettier-plugin-toml": "^0.3.1"
+  }
+}
