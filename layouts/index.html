@@ -1,5 +1,50 @@
 {{ define "main" }}
   <main>
-    <h1 translate="no">{{ .Site.Author.name }}</h1>
+    <div class="profile">
+      <img
+        class="profile__image"
+        src="{{ relURL .Site.Author.image }}"
+        width="500"
+        height="500"
+        alt="Profile image of {{ .Site.Author.name }}"
+      />
+
+      <span class="profile__name" translate="no">{{ .Site.Author.name }}</span>
+
+      {{ with .Site.Author.brief }}
+        <span class="profile__brief">{{ . }}</span>
+      {{ end }}
+
+
+      <div class="profile__links">
+        {{ with .Site.Author.resume }}
+          {{ partial "link.html" (dict "Site" $.Site
+            "url" .
+            "title" "Resume"
+            "content" `<i class="fa-solid fa-user"></i>`)
+          }}
+        {{ end }}
+
+        {{ with .Site.Social.github }}
+          {{ partial "link.html" (dict "Site" $.Site
+            "url" (print "https://github.com/" .)
+            "title" "Github"
+            "content" `<i class="fa-brands fa-github"></i>`)
+          }}
+        {{ end }}
+
+        {{ with .Site.Social.twitter }}
+          {{ partial "link.html" (dict "Site" $.Site
+            "url" (print "https://twitter.com/" .)
+            "title" "Twitter"
+            "content" `<i class="fa-brands fa-twitter"></i>`)
+          }}
+        {{ end }}
+
+        {{ with .Site.Author.email }}
+          <a href="mailto:{{ . }}"><i class="fa-solid fa-envelope"></i></a>
+        {{ end }}
+      </div>
+    </div>
   </main>
 {{ end }}

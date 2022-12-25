@@ -16,6 +16,10 @@ images = ["images/icatch_1200x630.png"]
 logo = "images/logo_192x192.png"
 externalLinkInNewTab = false
 
+[params.theme.style.sass]
+source = "scss/style.scss"
+target = "css/style.css"
+
 [params.theme.header]
 hideDescription = true
 
@@ -26,7 +30,10 @@ oneLine = true
 
 [author]
 name = "Mitsunobu Yoneda"
-email = "support@higamaya.com"
+email = ""
+image = "images/profile.png"
+brief = "A software developer"
+resume = "https://about-me.higamaya.com/"
 
 [social]
 github = "higamaya"
