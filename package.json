@@ -20,6 +20,6 @@
     "hugo-extended": "^0.124.1",
     "prettier": "^3.2.5",
     "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-toml": "^0.4.0"
+    "prettier-plugin-toml": "^2.0.1"
   }
 }
