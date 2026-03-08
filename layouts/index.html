@@ -15,7 +15,6 @@
         <span class="profile__brief">{{ . }}</span>
       {{ end }}
 
-
       <div class="profile__links">
         {{ with .Site.Author.resume }}
           {{ partial "link.html" (dict "Site" $.Site
@@ -35,14 +34,18 @@
 
         {{ with .Site.Social.twitter }}
           {{ partial "link.html" (dict "Site" $.Site
-            "url" (print "https://twitter.com/" .)
-            "title" "Twitter"
-            "content" `<i class="fa-brands fa-twitter"></i>`)
+            "url" (print "https://x.com/" .)
+            "title" "X"
+            "content" `<i class="fa-brands fa-x-twitter"></i>`)
           }}
         {{ end }}
 
         {{ with .Site.Author.email }}
-          <a href="mailto:{{ . }}"><i class="fa-solid fa-envelope"></i></a>
+          {{ partial "link.html" (dict "Site" $.Site
+            "url" (print "mailto:" .)
+            "title" "Email"
+            "content" `<i class="fa-solid fa-envelope"></i>`)
+          }}
         {{ end }}
       </div>
     </div>

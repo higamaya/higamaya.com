@@ -30,10 +30,10 @@ oneLine = true
 
 [author]
 name = "Mitsunobu Yoneda"
-email = ""
+email = "yoneda_mitsunobu@higamaya.com"
 image = "images/profile.png"
 brief = "A software developer"
-resume = "https://about-me.higamaya.com/"
+resume = ""
 
 [social]
 github = "higamaya"
