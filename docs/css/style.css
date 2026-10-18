@@ -1,0 +1,31 @@
+.profile {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .profile .profile__image {
+    margin-block-start: 3rem;
+    border-radius: 100vh;
+    width: 10em; }
+    @media screen and (prefers-color-scheme: dark) {
+      .profile .profile__image {
+        opacity: 0.8; } }
+  .profile .profile__name {
+    width: max-content;
+    font-size: 2em;
+    font-weight: bold; }
+  .profile .profile__brief {
+    margin-block-start: 1rem; }
+  .profile .profile__links {
+    margin-block-start: 5rem;
+    font-size: 2em; }
+    .profile .profile__links a:not(:last-child) {
+      margin-inline-end: 1em; }
+
+footer {
+  text-align: center; }
+  footer dialog {
+    text-align: start; }

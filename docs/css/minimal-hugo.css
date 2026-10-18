@@ -1,0 +1,358 @@
+/* Sakura.css v1.4.1
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura/
+ */
+/* Developed by Higama-ya based on Sakura.css */
+/* ********************************************************************************
+ * Define colors
+ */
+:root {
+  --sakura-text-primary-color: #4a4a4a;
+  --sakura-text-secondary-color: #1d7484;
+  --sakura-text-secondary-sub-color: #144f5a;
+  --sakura-text-focus-color: #982c61;
+  --sakura-background-color: #f9f9f9;
+  --sakura-background-sub-color: #f1f1f1; }
+  @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --sakura-text-primary-color: #c8c8c8;
+      --sakura-text-secondary-color: #ffffff;
+      --sakura-text-secondary-sub-color: #f1f1f1;
+      --sakura-text-focus-color: #f8d1d1;
+      --sakura-background-color: #222222;
+      --sakura-background-sub-color: #4a4a4a; } }
+/* ********************************************************************************
+ * Define fonts
+ */
+:root {
+  --sakura-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --sakura-font-family-mono: Courier, monospace; }
+
+/* ********************************************************************************
+ * Reset & Define base styles
+ */
+* {
+  margin: 0;
+  padding: 0;
+  outline-offset: 0.2em;
+  text-underline-offset: 0.2em;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+:focus {
+  outline-color: var(--sakura-text-primary-color); }
+
+:any-link {
+  color: inherit; }
+
+/* ********************************************************************************
+ * Define styles for each
+ */
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  font-family: var(--sakura-font-family); }
+
+body {
+  font-size: 1.8em;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: var(--sakura-text-primary-color);
+  background-color: var(--sakura-background-color);
+  padding: 13px; }
+  @media (max-width: 684px) {
+    body {
+      font-size: 1.53em; } }
+  @media (max-width: 382px) {
+    body {
+      font-size: 1.35em; } }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 700;
+  margin-block-start: 3rem;
+  margin-block-end: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word; }
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child {
+    margin-block-start: 0; }
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child {
+    margin-block-end: 0; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.1em; }
+
+h3 {
+  font-size: 1.6em; }
+
+h4 {
+  font-size: 1.3em; }
+
+h5 {
+  font-size: 1.1em; }
+
+h6 {
+  font-size: 1em; }
+
+p:where(:not(:last-child)) {
+  margin-block-end: 2.5rem; }
+
+small,
+sub,
+sup {
+  font-size: 75%; }
+
+hr {
+  border-color: var(--sakura-text-secondary-color); }
+
+a {
+  text-decoration: none;
+  color: var(--sakura-text-secondary-color); }
+  a:visited {
+    color: var(--sakura-text-secondary-sub-color); }
+  a:hover {
+    color: var(--sakura-text-focus-color);
+    border-bottom: 2px solid var(--sakura-text-primary-color); }
+
+ul {
+  padding-left: 1.4em; }
+  ul:where(:not(:last-child)) {
+    margin-block-end: 2.5rem; }
+
+li {
+  margin-block-end: 0.4em; }
+
+blockquote {
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  border-left: 5px solid var(--sakura-text-secondary-color);
+  background-color: var(--sakura-background-sub-color); }
+  blockquote:where(:not(:last-child)) {
+    margin-block-end: 2.5rem; }
+
+img,
+video {
+  height: auto;
+  max-width: 100%; }
+  img:where(:not(:last-child)),
+  video:where(:not(:last-child)) {
+    margin-block-end: 2.5rem; }
+
+pre {
+  background-color: var(--sakura-background-sub-color);
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 0.9em; }
+  pre:where(:not(:last-child)) {
+    margin-block-end: 2.5rem; }
+
+code,
+kbd,
+samp,
+var {
+  font-size: 0.9em;
+  font-family: var(--sakura-font-family-mono);
+  padding-inline: 0.5em;
+  background-color: var(--sakura-background-sub-color);
+  white-space: pre-wrap; }
+
+pre > :where(code) {
+  background-color: transparent;
+  white-space: pre;
+  font-size: 1em; }
+
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse; }
+
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid var(--sakura-background-sub-color); }
+
+input,
+textarea {
+  border: 1px solid var(--sakura-text-primary-color); }
+  input:focus,
+  textarea:focus {
+    border: 1px solid var(--sakura-text-secondary-color); }
+
+textarea {
+  width: 100%; }
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--sakura-text-secondary-color);
+  color: var(--sakura-background-color);
+  border-radius: 1px;
+  border: 1px solid var(--sakura-text-secondary-color);
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button[disabled],
+  button[disabled],
+  input[type="submit"][disabled],
+  input[type="reset"][disabled],
+  input[type="button"][disabled] {
+    cursor: default;
+    opacity: 0.5; }
+  .button:focus:enabled, .button:hover:enabled,
+  button:focus:enabled,
+  button:hover:enabled,
+  input[type="submit"]:focus:enabled,
+  input[type="submit"]:hover:enabled,
+  input[type="reset"]:focus:enabled,
+  input[type="reset"]:hover:enabled,
+  input[type="button"]:focus:enabled,
+  input[type="button"]:hover:enabled {
+    background-color: var(--sakura-text-focus-color);
+    border-color: var(--sakura-text-focus-color);
+    color: var(--sakura-background-color);
+    outline: 0; }
+
+input,
+textarea,
+select {
+  color: var(--sakura-text-primary-color);
+  padding: 6px 10px;
+  background-color: var(--sakura-background-sub-color);
+  border: 1px solid var(--sakura-background-sub-color);
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  input:where(:not(:last-child)),
+  textarea:where(:not(:last-child)),
+  select:where(:not(:last-child)) {
+    margin-block-end: 10px; }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid var(--sakura-text-secondary-color);
+    outline: 0; }
+
+input[type="checkbox"]:focus {
+  outline: 1px dotted var(--sakura-text-secondary-color); }
+
+label,
+legend,
+fieldset {
+  display: block;
+  font-weight: 500; }
+  label:where(:not(:last-child)),
+  legend:where(:not(:last-child)),
+  fieldset:where(:not(:last-child)) {
+    margin-block-end: 0.5rem; }
+
+dialog {
+  display: block;
+  position: fixed;
+  top: 50lvh;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  max-width: 90%;
+  width: 30em;
+  margin-inline: auto;
+  padding: 1em;
+  border: 3px solid var(--sakura-text-secondary-color);
+  background-color: var(--sakura-background-sub-color);
+  color: var(--sakura-text-primary-color); }
+
+html {
+  scrollbar-gutter: stable; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+  min-height: 100dvh;
+  height: max-content; }
+
+header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: 1.8em; }
+  header .header__logo {
+    margin: 0;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    transform: translateY(0.15em); }
+  header .header__title {
+    font-weight: bold; }
+  header .header__description {
+    font-size: 0.5em; }
+  header :not(:last-child) {
+    margin-inline-end: 0.3em; }
+
+nav {
+  margin-block-start: 1em; }
+  nav ul {
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      display: inline;
+      margin: 0;
+      text-transform: uppercase; }
+      nav ul li:not(:last-child) {
+        margin-inline-end: 3%; }
+
+main {
+  flex-grow: 1000;
+  margin-block: 3em; }
+
+footer .footer__separator {
+  opacity: 0.5; }
+
+:is(h1, h2, h3, h4, h5, h6) img {
+  margin: 0;
+  box-sizing: content-box;
+  height: 1em;
+  vertical-align: middle; }
+
+.google-analytics .google-analytics__statement {
+  top: 100lvh;
+  transform: translateY(0);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s; }
+
+.google-analytics:focus-within .google-analytics__statement {
+  top: 50lvh;
+  transform: translateY(-50%);
+  visibility: visible;
+  opacity: 1; }
